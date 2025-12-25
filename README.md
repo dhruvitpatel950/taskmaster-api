@@ -42,19 +42,14 @@ cd taskmaster
 # 2. Build and Run
 docker compose up --build
 
-```
-
 The API will be available at `http://127.0.0.1:8000/api/`.
 
 ### 🔑 First Time Setup
 
 Since the database is fresh, create a superuser inside the container:
 
-```bash
 docker compose exec web python manage.py migrate
 docker compose exec web python manage.py createsuperuser
-
-```
 
 ## 📖 API Documentation
 
@@ -73,7 +68,6 @@ To test the background worker:
 
 ## 📂 Project Structure
 
-```
 taskmaster/
 ├── config/           # Project settings & URL routing
 ├── tasks/            # Main application logic
@@ -84,8 +78,6 @@ taskmaster/
 │   └── tasks.py      # Celery background jobs
 ├── docker-compose.yml# Container orchestration
 └── Dockerfile        # Image definition
-
-
 
 *Built with ❤️ by [Dhruvit Patel]*
 
