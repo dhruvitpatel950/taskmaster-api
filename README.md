@@ -62,6 +62,7 @@ To test the background worker:
 
 ## 📂 Project Structure
 
+```text
 taskmaster/
 ├── config/           # Project settings & URL routing
 ├── tasks/            # Main application logic
@@ -72,6 +73,5 @@ taskmaster/
 │   └── tasks.py      # Celery background jobs
 ├── docker-compose.yml# Container orchestration
 └── Dockerfile        # Image definition
-
 *Built with ❤️ by [Dhruvit Patel]*
 
