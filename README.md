@@ -73,5 +73,6 @@ taskmaster/
 │   └── tasks.py      # Celery background jobs
 ├── docker-compose.yml# Container orchestration
 └── Dockerfile        # Image definition
-*Built with ❤️ by [Dhruvit Patel]*
+```
+Built with ❤️ by [Dhruvit Patel]
 
