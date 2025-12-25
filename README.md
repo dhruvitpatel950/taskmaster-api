@@ -7,10 +7,10 @@ Copy the content below and paste it into a file named `README.md` in your projec
 
 > A robust, production-ready Task Management API built with Django REST Framework, Docker, and Celery.
 
-![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python)
-![Django](https://img.shields.io/badge/Django-5.0-green?style=for-the-badge&logo=django)
-![Docker](https://img.shields.io/badge/Docker-Enabled-blue?style=for-the-badge&logo=docker)
-![Celery](https://img.shields.io/badge/Async-Celery-orange?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-5.0-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-Async-37814A?style=for-the-badge&logo=celery&logoColor=white)
 
 ## 🌟 Features
 
