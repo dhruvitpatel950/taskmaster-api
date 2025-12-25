@@ -1,8 +1,3 @@
-Here is the complete, professional `README.md` file for your **TaskMaster** project.
-
-Copy the content below and paste it into a file named `README.md` in your project's root folder.
-
-```markdown
 # 🚀 TaskMaster API
 
 > A robust, production-ready Task Management API built with Django REST Framework, Docker, and Celery.
@@ -34,7 +29,6 @@ Copy the content below and paste it into a file named `README.md` in your projec
 
 The easiest way to run the project. No local Python/Postgres required.
 
-```bash
 # 1. Clone the repo
 git clone [https://github.com/YOUR_USERNAME/taskmaster.git](https://github.com/YOUR_USERNAME/taskmaster.git)
 cd taskmaster
