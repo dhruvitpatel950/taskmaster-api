@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # 1. The Database Service
+  db:
+    image: postgres:16
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=taskmaster_db
+      - POSTGRES_USER=taskmaster_user
+      - POSTGRES_PASSWORD=supersecretpassword
+
+  # 2. Redis Service
+  redis:
+    image: redis:6-alpine
+
+  # 3. Django Web Service
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+    environment:
+      - DB_HOST=db
+      - DB_NAME=taskmaster_db
+      - DB_USER=taskmaster_user
+      - DB_PASS=supersecretpassword
+      - CELERY_BROKER_URL=redis://redis:6379/0
+
+  # 4. Celery Worker Service
+  worker:
+    build: .
+    command: celery -A config worker -l info
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+    environment:
+      - DB_HOST=db
+      - DB_NAME=taskmaster_db
+      - DB_USER=taskmaster_user
+      - DB_PASS=supersecretpassword
+      - CELERY_BROKER_URL=redis://redis:6379/0
+
+volumes:
+  postgres_data:
